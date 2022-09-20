@@ -1,12 +1,12 @@
-var slider = document.getElementById('slider')
-var button = document.getElementById('button')
+const slider = document.getElementById('slider')
+const button = document.getElementById('button')
 
-var valor = document.getElementById('valor')
-var password = document.getElementById('password')
-var containerpass = document.getElementById('container-pass')
+const valor = document.getElementById('valor')
+const password = document.getElementById('password')
+const containerpass = document.getElementById('container-pass')
 
-var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$"
-var novasenha = ""
+let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$"
+let novasenha = ""
 
 valor.innerHTML = slider.value
 
@@ -16,7 +16,7 @@ slider.oninput = function(){
 
 function generatepass(){
     var pass = ""
-    for(var contador = 0, num = charset.length; contador < slider.value; contador++){
+    for(let contador = 0, num = charset.length; contador < slider.value; contador++){
         pass += charset.charAt(Math.floor(Math.random() * num))
     }
 
