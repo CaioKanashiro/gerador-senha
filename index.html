@@ -12,12 +12,12 @@
     <img class="logo" src="images/logo.png" alt="Logo do Gerador">
 
     <main class="container-input">
-        <span>Tamanho de<span id="valor"></span> caracteres</span>
-        <input id="slider" class="slider" type="range" min="5" max="25" value="50%">
-        <button id="button" class="button">Gerar Senha</button>
+        <span>Tamanho de <span id="valor"></span> caracteres</span>
+        <input id="slider" class="slider" type="range" min="10" max="20" value="50%">
+        <button id="button" class="button" onclick="generatepass()">Gerar Senha</button>
     </main>
 
-    <div id="container-pass" class="container-pass hide">
+    <div id="container-pass" class="container-pass hide" onclick="copypass()">
         <span class="title">Sua senha gerada foi:</span>
         <span id="password" class="password">123456</span>
         <span class="tooltip">Clique na senha para copiar ☝</span>
